@@ -37,13 +37,12 @@ Jobqueue
 For HPC systems such as Leonardo where we need to interact with the batch system (e.g. SLURM of Leonardo), this type is convenient because the workers are defined as separate SLURM jobs.
 
 .. code-block:: python
-   ::linenos::
-
-   from distributed import Client
-   from dask_jobqueue import SLURMCluster
-   # Next step is to start a SLURM Cluster
-   # we define the characteristics of eack worker
-   cluster = SLURMCluster(cores=1,
+  
+  from distributed import Client
+  from dask_jobqueue import SLURMCluster
+  # Next step is to start a SLURM Cluster
+  # we define the characteristics of eack worker
+  cluster = SLURMCluster(cores=1,
                        processes=1,
                        memory="16GB",
                        account="cin_staff",
@@ -51,8 +50,8 @@ For HPC systems such as Leonardo where we need to interact with the batch system
                        interface="ib0",
                        job_extra_directives=['--tasks-per-node=1']
                        )
-   # Add more workers (i.e. SLURM jobs)
-   cluster.scale(2)
+  # Add more workers (i.e. SLURM jobs)
+  cluster.scale(2)
 
 When we define the cluster we need to define the characteristics of the worker jobs. This we do with the usual SLURM job definitions (remember each worker will be a SLURM jobs).
 In the above note the use of `job_extra_directives=[]` to provide job information that `dask_jobqueue` does not define. Note also the use of `cluster.scale()` to set the number of workers.
