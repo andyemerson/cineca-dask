@@ -23,11 +23,9 @@ For example:
 
 
 .. code-block:: python
-  :linenos:
 
-  
   from dask.distributed import Client
-  client = Client(...)  # Connect to distributed cluster and override default
+  client = Client()  # Connect to distributed cluster and override default
   df.x.sum().compute()  # This now runs on the distributed system
 
 After the client object is set up, all the following python code is run in the cluster. 
