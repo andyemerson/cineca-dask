@@ -18,6 +18,11 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 2
+   :numbered:
 
    installation
-   api
+   description
+   scheduler
+   use
+
