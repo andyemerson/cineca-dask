@@ -1,5 +1,5 @@
 Welcome to using DASK on CINECA
-===================================
+=================================
 
 **DASK** is a library for parallelising Python codes.
 It is particularly useful for performing data analysis on HPC systems, integrating well with batch schedulers such as GPUs.
@@ -12,12 +12,12 @@ how to :ref:`installation` the project.
 
 .. note::
 
-   This project is under active development.
+   This project is under active development and refers explicitly to CINECA systems
 
 Contents
 --------
 
 .. toctree::
 
-   usage
+   installation
    api
