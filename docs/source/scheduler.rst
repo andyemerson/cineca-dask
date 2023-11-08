@@ -58,7 +58,7 @@ In the above note the use of `job_extra_directives=[]` to provide job informatio
 
 .. warning::
    The DASK idea of what the appropriate SLURM job parameters should be, can (and does) vary as to what we expect on, say, Leonardo.
-   It is therefore important to explicitly set the SLURM parameters or use defaults (see below).
+   It is therefore *important* to explicitly set the SLURM parameters or use defaults (see below).
 
 
 Setting SLURM  job defaults
