@@ -9,7 +9,7 @@ In the vast majority of cases we prefer the distributed-type since threading can
 
 Important distributed scheduler types include:
 
-1. Simple distributed
+1. Simple distributed (Local Cluster)
 2. Jobqueue (e.g. SlurmCluster)
 3. MPI 
 4. LocalCUDACluster (for GPUs)
@@ -28,6 +28,16 @@ For example:
   from dask.distributed import Client
   client = Client()  # Connect to distributed cluster and override default
   df.x.sum().compute()  # This now runs on the distributed system
+
+You can explicitly request the creation of the Local Cluster:
+
+.. code-block:: python
+
+  from dask.distributed import Client
+  from dask.distributed import LocalCluster
+  cluster = LocalCluster()
+  client = Client(cluster)
+
 
 After the client object is set up, all the following python code is run in the cluster. This type of cluster/scheduler would be suitable for a *cloud* environment.
 
