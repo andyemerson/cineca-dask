@@ -21,8 +21,8 @@ Contents
    :maxdepth: 2
    :numbered:
 
-   installation
    description
+   installation
    scheduler
-   use
+   examples
 
